@@ -1,0 +1,8 @@
+
+.c-list__ticket-holder {
+    display: flex;
+    flex-wrap: wrap;
+}
+.c-list__title{
+    color: #fff;
+}

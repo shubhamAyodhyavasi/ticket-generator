@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Dialer, List, Wheel } from './components/'
 import './App.css';
+import {TicketProvider} from './context/Ticket.context'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TicketProvider>
+      <div className="App">
+        <div className="c-ticket">
+          <div className="c-ticket__top">
+            <div className="c-ticket__dialer">
+              <Dialer />
+            </div>
+            <div className="c-ticket__wheel">
+              <Wheel />
+            </div>
+          </div>
+          <div className="c-ticket__list">
+            <List />
+          </div>
+        </div>
+      </div>
+    </TicketProvider>
   );
 }
 
